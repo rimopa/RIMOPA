@@ -14,4 +14,6 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
+
 [![RIMOPA's GitHub stats](https://github-readme-stats.vercel.app/api?username=RIMOPA&count_private=true&show_icons=true&theme=algolia&border_radius=15px&include_all_commits=true)](https://github.com/RIMOPA/)
+[![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=RIMOPA&langs_count=10&count_private=true&show_icons=true&theme=algolia&border_radius=15px&include_all_commits=true&layout=compact)](https://github.com/RIMOPA?tab=repositories)
