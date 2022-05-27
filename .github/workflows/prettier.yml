@@ -21,7 +21,7 @@ jobs:
           
       - name: Prettify code (RIMOPA)
         if: steps.generate-token.outcome == 'success'
-        uses: RIMOPA/prettier_action@master
+        uses: ScratchAddons/prettier_action@master
         with:
           prettier_options: --write .
           commit_message: Format code
@@ -30,7 +30,7 @@ jobs:
           
       - name: Prettify code (outside RIMOPA)
         if: steps.generate-token.outcome != 'success'
-        uses: RIMOPA/prettier_action@master
+        uses: ScratchAddons/prettier_action@master
         with:
           prettier_options: --write .
           commit_message: Format code
