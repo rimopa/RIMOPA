@@ -1,4 +1,8 @@
-### Hi there 👋
+### console.log("")
+### print("")
+### io.write("")
+### puts ""
+# Hello World
 
 <!--
 **RIMOPA/RIMOPA** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
