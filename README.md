@@ -15,6 +15,4 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 
-[![RIMOPA's GitHub stats](https://github-readme-stats.vercel.app/api?username=RIMOPA&count_private=true&show_icons=true&theme=dark&border_radius=15px&include_all_commits=true)](https://github.com/RIMOPA/)
-[![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=RIMOPA&langs_count=10&count_private=true&show_icons=true&theme=dark&border_radius=15px&include_all_commits=true&layout=compact)](https://github.com/RIMOPA?tab=repositories)
 <p align=center><img align="center" src="https://raw.githubusercontent.com/RIMOPA/RIMOPA/output/github-contribution-grid-snake.svg" /></p>
