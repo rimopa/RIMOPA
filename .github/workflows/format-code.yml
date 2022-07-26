@@ -16,7 +16,6 @@ jobs:
         if: github.repository_owner == 'RIMOPA'
         continue-on-error: true
         with:
-          app_id: ${{ secrets.BOT_APP_ID }}
           private_key: ${{ secrets.BOT_PRIVATE_KEY }}
           
       - name: Prettify code (RIMOPA)
