@@ -16,7 +16,7 @@ body {
 bar {
   position: absolute;
   right: 0;
-  background: #2c6d31;
+  background: #f15c2a;
   height: auto;
   width: 100vw;
   color: #fff;
@@ -37,7 +37,7 @@ bar#header {
 }
 #header img.logo {
   height: 2.25rem;
-  bottom: 0.25em;
+  bottom: 0.08em;
   margin-left: 1.05em;
   position: relative;
 }
@@ -47,7 +47,7 @@ bar#header {
   vertical-align: middle;
 }
 #header h-item.button:hover {
-  background-color: #255d2a;
+  background-color: #b13e17;
 }
 .small {
   font-size: 90%;
@@ -65,13 +65,13 @@ a.link:hover {
   padding-top: 4.8rem;
   padding-bottom: 0.2rem;
 }
-#specific-versions ul li a {
+#puntos-especificos ul li a {
   color: #ff5300;
 }
-#specific-versions ul li a:hover {
+#puntos-especificos ul li a:hover {
   color: #00dc0f;
 }
-#specific-versions ul li {
+#puntos-especificos ul li {
   margin-bottom: 0.7em;
 }
 bar a.link {
@@ -146,7 +146,7 @@ body.dark bar {
 body.dark #header .h-item.button:hover {
   background-color: #515151;
 }
-body.dark #specific-versions ul li a {
+body.dark #puntos-especificos ul li a {
   color: #f6ab3c;
 }
 body.dark bar a.link {
@@ -161,7 +161,7 @@ body.dark bar a.link:hover {
 body.dark a.link:hover {
   color: #00dc0f;
 }
-body.dark #specific-versions ul li a:hover {
+body.dark #puntos-especificos ul li a:hover {
   color: #00dc0f;
 }
 body.dark #header h-item.button:hover {
