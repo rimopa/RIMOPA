@@ -1,4 +1,4 @@
-function goToLatest(editor) {
+/*function goToLatest(editor) {
 	const vLink = document.querySelector("a[data-v]");
 
 	location = vLink.dataset.v + "/" + (editor ? "editor.html" : "index.html");
@@ -34,7 +34,7 @@ function doHash() {
 }
 
 window.addEventListener("hashchange", doHash);
-doHash();
+doHash();*/
 
 
 // theme
