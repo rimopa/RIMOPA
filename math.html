@@ -5,16 +5,13 @@
     <script type="text/javascript" src="index/math.js" defer></script>
     <link rel="stylesheet" href="index/index.css" />
     <link rel="icon" href="index/favicon.png" />
-    <meta charset="UTF-8" />
-    <meta property="og:title" content="ScratchCE Betas" />
-    <meta property="og:url" content="https://scratchce.github.io/beta" />
-    <meta property="og:site_name" content="ScratchCE" />
-    <meta
-      property="og:description"
-      content="By the communities, for the communities."
-    />
+    <meta charset="UTF-3" />
+    <meta property="og:title" content="Math - Rimopa" />
+    <meta property="og:url" content="https://rimopa.github.io/RIMOPA/math" />
+    <meta property="og:site_name" content="Rimopa" />
+    <meta property="og:description" content="Santino Rimondotto" />
 
-    <title>Rimopa</title>
+    <title>Math - Rimopa</title>
   </head>
 
   <body id="body" class="">
@@ -28,9 +25,7 @@
           src="index/logo.png"
         />
       </h-item>
-      <!--<h-item>
-				<a href="https://scratchce.github.io/beta/<redirect to the lastest or version>/#id" class="link"> Caress Communicat</a>
-			</h-item>-->
+
       <h-item class="button" onclick="toggleTheme()">
         <img
           style="vertical-align: middle"
@@ -39,6 +34,10 @@
           height="24"
         />
       </h-item>
+      <a href="math.html" class="link" style="width: 100%">Math</a>
+      <!--<h-item>
+				<a href="https://scratchce.github.io/beta/<redirect to the lastest or version>/#id" class="link"> Caress Communicat</a>
+			</h-item>-->
     </bar>
     <div class="main-content">
       <!--lastest version
@@ -62,38 +61,23 @@
       >
         <h3 title="annualperf">Get annual rate of return on any investment</h3>
         <label>Initial capital (invested):</label>
-        <input
-          type="number"
-          id="initialCapital"
-          value="100"
-          style="margin-block-start: 1em"
-        />
+        <input class="math" type="number" id="initialCapital" value="100" />
         <br />
         <label>Final capital:</label>
-        <input
-          type="number"
-          id="finalCapital"
-          value="150"
-          style="margin-block-start: 1em"
-        />
+        <input class="math" type="number" id="finalCapital" value="150" />
         <br />
         <label>Days it was invested:</label>
-        <input
-          type="number"
-          id="daysInvested"
-          value="365"
-          style="margin-block-start: 1em"
-        />
+        <input class="math" type="number" id="daysInvested" value="365" />
         <br />
         <input
+          class="math"
           type="submit"
           value="Get result"
           onclick="annualperf()"
-          style="margin-block-start: 1em"
         />
         <br />
         <p>Your invesment's annual performance:</p>
-        <p id="resultannualperf">50%</p>
+        <p id="resultannualperf" style="font-size: 125%">50%</p>
       </div>
 
       <bar id="footer"
