@@ -36,32 +36,30 @@ function doHash() {
 window.addEventListener("hashchange", doHash);
 doHash();*/
 
-
 // theme
 function darkMode() {
-	localStorage.setItem("mode", "dark");
-	document.getElementById("body").classList.add("dark");
+  localStorage.setItem("mode", "dark");
+  document.getElementById("body").classList.add("dark");
 }
 function lightMode() {
-	localStorage.setItem("mode", "light");
-	document.getElementById("body").classList.remove("dark");
+  localStorage.setItem("mode", "light");
+  document.getElementById("body").classList.remove("dark");
 }
 function toggleTheme() {
-	if (localStorage.getItem("mode") === "dark") {
-		lightMode();
-	}
-	else {
-		darkMode();
-	}
+  if (localStorage.getItem("mode") === "dark") {
+    lightMode();
+  } else {
+    darkMode();
+  }
 }
 
 // automatic light/dark mode
 if (localStorage.getItem("mode") === "dark") {
-	darkMode();
+  darkMode();
 } else if (localStorage.getItem("mode") === "light") {
-	lightMode();
+  lightMode();
 } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-	darkMode();
+  darkMode();
 } else {
-	lightMode();
+  lightMode();
 }
