@@ -49,6 +49,7 @@ bar#header {
 #header h-item.button:hover {
   background-color: #b13e17;
 }
+
 .small {
   font-size: 90%;
 }
