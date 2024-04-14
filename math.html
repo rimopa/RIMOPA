@@ -5,7 +5,7 @@
     <script type="text/javascript" src="index/math.js" defer></script>
     <link rel="stylesheet" href="index/index.css" />
     <link rel="icon" href="index/favicon.png" />
-    <meta charset="UTF-3" />
+    <meta charset="UTF-8" />
     <meta property="og:title" content="Math - Rimopa" />
     <meta property="og:url" content="https://rimopa.github.io/RIMOPA/math" />
     <meta property="og:site_name" content="Rimopa" />
@@ -55,19 +55,33 @@
           >(latest editor)<br
         /></a>
       </div>-->
-      <div
-        id="getannualperformance"
-        style="margin-block-start: 1em; margin-block-end: 1em"
-      >
-        <h3 title="annualperf">Get annual rate of return on any investment</h3>
+      <div id="getannualperformance" class="mathblock">
+        <h3 title="annualperf">
+          - Get annual rate of return on any investment
+        </h3>
         <label>Initial capital (invested):</label>
-        <input class="math" type="number" id="initialCapital" value="100" />
+        <input
+          class="math"
+          type="number"
+          id="anperf.initialCapital"
+          value="100"
+        />
         <br />
         <label>Final capital:</label>
-        <input class="math" type="number" id="finalCapital" value="150" />
+        <input
+          class="math"
+          type="number"
+          id="anperf.finalCapital"
+          value="150"
+        />
         <br />
         <label>Days it was invested:</label>
-        <input class="math" type="number" id="daysInvested" value="365" />
+        <input
+          class="math"
+          type="number"
+          id="anperf.daysInvested"
+          value="365"
+        />
         <br />
         <input
           class="math"
@@ -77,9 +91,43 @@
         />
         <br />
         <p>Your invesment's annual performance:</p>
-        <p id="resultannualperf" style="font-size: 125%">50%</p>
+        <p id="anperf.result" style="font-size: 125%"></p>
+        <p>
+          The formula is: ((finalCapital - initialCapital) / initialCapital /
+          daysInvested) * 365 * 100
+        </p>
       </div>
-
+      <div id="getdistance2points" class="mathblock">
+        <h3 title="annualperf">
+          - Get any kind of distance between any two points
+        </h3>
+        <label>p:</label>
+        <input class="math" type="number" id="d2p.p" value="2" />
+        <span style="font-size: 75%">(2 is euclidian/straight distance)</span>
+        <br />
+        <br />
+        <label>x₁:</label>
+        <input class="math" type="number" id="d2p.x1" value="0" />
+        <label>y₁:</label>
+        <input class="math" type="number" id="d2p.y1" value="2" />
+        <br />
+        <br />
+        <label>x₂:</label>
+        <input class="math" type="number" id="d2p.x2" value="0" />
+        <label>y₂:</label>
+        <input class="math" type="number" id="d2p.y2" value="4" />
+        <br />
+        <input
+          class="math"
+          type="submit"
+          value="Get result"
+          onclick="distance2points()"
+        />
+        <br />
+        <p>The distance between that two points:</p>
+        <p id="d2p.result" style="font-size: 125%"></p>
+        <p>The formula is: (|x₂ - x₁|ᵖ + |y₂ - y₁|ᵖ)¹/ᵖ</p>
+      </div>
       <bar id="footer"
         ><div class="footer-content">
           <h2 style="line-height: 10px; margin-block-start: 1em">

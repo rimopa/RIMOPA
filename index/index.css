@@ -52,7 +52,7 @@ bar#header {
 .math {
   width: 90px;
   border-color: #ccc;
-  margin-top: 1em;
+  margin-top: 14px;
   box-shadow: inset 0 0.0625em 0.125em rgba(0, 0, 0, 0.05);
   max-width: 100%;
   background-color: white;
@@ -68,8 +68,9 @@ bar#header {
   background-color: #f15c2a;
   border-color: #bb9d3c;
   color: #ffffff;
-  /*background-color: #a6f4ff;
-  border-color: #26a0da;*/
+}
+.mathblock h3 {
+  color: #ee7248;
 }
 /*[type="submit"].math:onclick{
   background-color: #34b4e3;
