@@ -10,7 +10,7 @@ a.imHere:hover {
 }
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #3f3f3f;
+  color: #000;
   background: #fcfcfc;
 }
 bar {
@@ -55,8 +55,8 @@ bar#header {
   margin-top: 14px;
   box-shadow: inset 0 0.0625em 0.125em rgba(0, 0, 0, 0.05);
   max-width: 100%;
-  background-color: white;
-  border-color: black;
+  background-color: #fff;
+  border-color: #000;
   border-radius: 4px;
   color: #363636;
 }
@@ -67,7 +67,7 @@ bar#header {
   cursor: pointer;
   background-color: #f15c2a;
   border-color: #bb9d3c;
-  color: #ffffff;
+  color: #fff;
 }
 .mathblock h3 {
   color: #ee7248;
