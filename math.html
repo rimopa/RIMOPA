@@ -55,6 +55,10 @@
           >(latest editor)<br
         /></a>
       </div>-->
+      <h3 title="aclaration">
+        Remember: JavaScript isn't perfect! (It simply can't use full irrational
+        numbers). The results of these tools are approximate.
+      </h3>
       <div id="getannualperformance" class="mathblock">
         <h3 title="annualperf">
           - Get annual rate of return on any investment
@@ -98,7 +102,7 @@
         </p>
       </div>
       <div id="getdistance2points" class="mathblock">
-        <h3 title="annualperf">
+        <h3 title="distancebe2points">
           - Get any kind of distance between any two points
         </h3>
         <label>p:</label>
@@ -127,6 +131,76 @@
         <p>The distance between that two points:</p>
         <p id="d2p.result" style="font-size: 125%"></p>
         <p>The formula is: (|x₂ - x₁|ᵖ + |y₂ - y₁|ᵖ)¹/ᵖ</p>
+      </div>
+      <div id="getScreenSize" class="mathblock">
+        <h3 title="makeRelationscm&In">
+          - Make relations between quadrilateral sizes
+        </h3>
+        <span style="font-size: 75%"
+          >(May be useful for obtaining screen sizes)</span
+        >
+        <br />
+        <div id="cmin.inputs">
+          <label>Wide:</label>
+          <input class="math" type="number" id="cmin.wide" value="0" />
+          <label>Measure:</label>
+          <select class="math" id="cmin.wide.type">
+            <option value="cm">Centimeters</option>
+            <option value="in">Inches</option>
+          </select>
+          <br /><br />
+          <label>Height:</label>
+          <input class="math" type="number" id="cmin.height" value="0" />
+          <label>Measure:</label>
+          <select class="math" id="cmin.height.type">
+            <option value="cm">Centimeters</option>
+            <option value="in">Inches</option>
+          </select>
+          <br /><br />
+          <label>Diagonal:</label>
+          <input class="math" type="number" id="cmin.diag" value="27" />
+          <label>Measure:</label>
+          <select class="math" id="cmin.diag.type">
+            <option value="cm">Centimeters</option>
+            <option value="in" selected>Inches</option>
+          </select>
+          <br /><br />
+          <label>Acpect ratio:</label>
+          <label>(horizontal, then vertical)</label>
+          <br />
+          <input class="math" type="number" id="cmin.ratio.h" value="16" />
+          <span>:</span>
+          <input class="math" type="number" id="cmin.ratio.v" value="9" />
+          <br />
+          <br />
+          <select id="cmin.result.type" class="math">
+            <option value="cm">Centimeters</option>
+            <option value="in">Inches</option>
+          </select>
+          <input
+            class="math"
+            type="submit"
+            value="Get result"
+            onclick="makeCmInRelations()"
+          />
+        </div>
+        <div style="margin: 20px; display: none" id="cmin.warning">
+          <p style="font-size: 125%; color: #c70039">
+            Not enough values to run
+          </p>
+        </div>
+        <div id="cmin.results">
+          <p id="cmin.result.method" style="font-size: 125%"></p>
+          <p>The aspect ratio:</p>
+          <p id="cmin.result.ratio" style="font-size: 125%"></p>
+          <p>The wide:</p>
+          <p id="cmin.result.wide" style="font-size: 125%"></p>
+          <p>The height:</p>
+          <p id="cmin.result.height" style="font-size: 125%"></p>
+          <p>The diagonal:</p>
+          <p id="cmin.result.diag" style="font-size: 125%"></p>
+          <p>These values are approximate, remember JavaScript isn't perfect</p>
+        </div>
       </div>
       <bar id="footer"
         ><div class="footer-content">
