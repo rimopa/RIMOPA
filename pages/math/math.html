@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script type="text/javascript" src="index/index.js" defer></script>
-    <script type="text/javascript" src="index/math.js" defer></script>
-    <link rel="stylesheet" href="index/index.css" />
-    <link rel="icon" href="index/favicon.png" />
+    <script type="text/javascript" src="../general/index.js" defer></script>
+    <script type="text/javascript" src="math.js" defer></script>
+    <link rel="stylesheet" href="../general/index.css" />
+    <link rel="icon" href="../general/favicon.png" />
     <meta charset="UTF-8" />
     <meta property="og:title" content="Math - Rimopa" />
     <meta property="og:url" content="https://rimopa.github.io/RIMOPA/math" />
     <meta property="og:site_name" content="Rimopa" />
     <meta property="og:description" content="Santino Rimondotto" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Math - Rimopa</title>
   </head>
-
   <body id="body" class="">
     <bar id="header" style="top: 0">
       <h-item>
@@ -22,14 +21,14 @@
           class="logo"
           alt="Rimopa"
           draggable="false"
-          src="index/logo.png"
+          src="../general/logo.png"
         />
       </h-item>
 
       <h-item class="button" onclick="toggleTheme()">
         <img
           style="vertical-align: middle"
-          src="index/dark_theme.svg"
+          src="../general/dark_theme.svg"
           width="24"
           height="24"
         />
@@ -165,8 +164,7 @@
             <option value="in" selected>Inches</option>
           </select>
           <br /><br />
-          <label>Acpect ratio:</label
-          >
+          <label>Acpect ratio:</label>
           <span>(horizontal, then vertical)</span>
           <br />
           <input class="math" type="number" id="cmin.ratio.h" value="16" />
