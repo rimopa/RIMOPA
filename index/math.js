@@ -51,7 +51,7 @@ function makeCmInRelations() {
       document.getElementById("cmin.ratio.h").value != 0) +
       (document.getElementById("cmin.diag").value != 0) +
       (document.getElementById("cmin.height").value != 0) +
-      (document.getElementById("cmin.wide").value != 0) <
+      (document.getElementById("cmin.width").value != 0) <
     2
   ) {
     document.getElementById("cmin.warning").style.display = "contents";
@@ -63,11 +63,11 @@ function makeCmInRelations() {
     document.getElementById("cmin.warning").style.display = "none";
     document.getElementById("cmin.results").style.display = "contents";
   }
-  //get wide in cm
-  if (document.getElementById("cmin.wide.type").value == "in") {
-    wide = +document.getElementById("cmin.wide").value * 2.54;
+  //get width in cm
+  if (document.getElementById("cmin.width.type").value == "in") {
+    width = +document.getElementById("cmin.width").value * 2.54;
   } else {
-    wide = +document.getElementById("cmin.wide").value;
+    width = +document.getElementById("cmin.width").value;
   }
   //get height in cm
   if (document.getElementById("cmin.height.type").value == "in") {
@@ -84,11 +84,11 @@ function makeCmInRelations() {
   hRatio = +document.getElementById("cmin.ratio.h").value;
   vRatio = +document.getElementById("cmin.ratio.v").value;
 
-  //a=the value that, multiplicated by the radio, gives the height and wide
+  //a=the value that, multiplicated by the radio, gives the height and width
   newHRatio = 0;
   newVRatio = 0;
   newHeight = 0;
-  newWide = 0;
+  newwidth = 0;
   newDiag = 0;
   a = 0;
   method1 = "patata";
@@ -101,9 +101,9 @@ function makeCmInRelations() {
       method2 = "diagonal";
       a = Math.sqrt(diag ** 2 / (hRatio ** 2 + vRatio ** 2));
     } else {
-      if (wide != 0) {
-        method2 = "wide";
-        a = wide / hRatio;
+      if (width != 0) {
+        method2 = "width";
+        a = width / hRatio;
       } else {
         if (height != 0) {
           method2 = "height";
@@ -111,22 +111,22 @@ function makeCmInRelations() {
         }
       }
     }
-    newWide = a * newHRatio;
+    newwidth = a * newHRatio;
     newHeight = a * newVRatio;
   } else {
-    if (wide != 0) {
-      newWide = wide;
-      method1 = "wide";
+    if (width != 0) {
+      newwidth = width;
+      method1 = "width";
       if (height != 0) {
         method2 = "height";
         newHeight = height;
-        a = getMaxDivinCommon(wide, height);
+        a = getMaxDivinCommon(width, height);
       } else {
         if (diag !== 0) {
           method2 = "diagonal";
           a = getMaxDivinCommon(
-            (newHeight = Math.sqrt(diag ** 2 - wide ** 2)),
-            wide
+            (newHeight = Math.sqrt(diag ** 2 - width ** 2)),
+            width
           );
         }
       }
@@ -135,21 +135,21 @@ function makeCmInRelations() {
         method1 = "height";
         newHeight = height;
         if (diag != 0) {
-          method2 = "diag";
+          method2 = "diagonal";
           a = getMaxDivinCommon(
-            (newWide = Math.sqrt(diag ** 2 - height ** 2)),
+            (newwidth = Math.sqrt(diag ** 2 - height ** 2)),
             height
           );
         }
       }
     }
     newVRatio = newHeight / a;
-    newHRatio = newWide / a;
+    newHRatio = newwidth / a;
   }
   /*
   cmin.result.method
   cmin.result.ratio
-  cmin.result.wide
+  cmin.result.width
   cmin.result.height
   cmin.result.diag
   */
@@ -160,14 +160,14 @@ function makeCmInRelations() {
   document.getElementById("cmin.result.ratio").innerText =
     newHRatio + ":" + newVRatio;
   if (document.getElementById("cmin.result.type").value == "in") {
-    document.getElementById("cmin.result.wide").innerText =
-      newWide / 2.54 + "in";
+    document.getElementById("cmin.result.width").innerText =
+      newwidth / 2.54 + "in";
     document.getElementById("cmin.result.height").innerText =
       newHeight / 2.54 + "in";
     document.getElementById("cmin.result.diag").innerText =
       newDiag / 2.54 + "in";
   } else {
-    document.getElementById("cmin.result.wide").innerText = newWide + "cm";
+    document.getElementById("cmin.result.width").innerText = newwidth + "cm";
     document.getElementById("cmin.result.height").innerText = newHeight + "cm";
     document.getElementById("cmin.result.diag").innerText = newDiag + "cm";
   }
