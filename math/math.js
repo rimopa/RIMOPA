@@ -1,68 +1,4 @@
-measureName = [
-  "Centimeters",
-  "Inches",
-  "Feet",
-  "Light years",
-  "Yards",
-  "Furlongs",
-  "Rods",
-  "Nautical Miles",
-  "Miles",
-  "Parsec",
-  "League",
-  "Astronomical units",
-];
-measureCode = [
-  "cm",
-  "in",
-  "ft",
-  "ly",
-  "yd",
-  "fur",
-  "rd",
-  "nmi",
-  "mi",
-  "pc",
-  "lea",
-  "AU",
-];
-measure2cm = [
-  1, 2.54, 30.48, 946073047258004200, 91.44, 20116.8, 502.92, 185200, 160934.4,
-  3085677581279958500, 482803.2, 14959787069100,
-];
-//how many centimeters fit in the other measure
-selects = [
-  document.getElementById("cmin.width.type"),
-  document.getElementById("cmin.height.type"),
-  document.getElementById("cmin.diag.type"),
-  document.getElementById("cmin.result.type"),
-];
-//Accomodate measure selects
-for (let i = 0; i < selects.length; i++) {
-  for (let i2 = 0; i2 < measureCode.length; i2++) {
-    const ele = document.createElement("option");
-    ele.value = measureCode[i2];
-    ele.innerText = measureName[i2];
-    selects[i].appendChild(ele);
-  }
-}
-function getMaxDivinCommon(a, b) {
-  if (b === 0) {
-    return a;
-  }
-  return getMaxDivinCommon(b, a % b);
-}
-function getMeasure(type) {
-  for (let index = 0; index < measureCode.length; index++) {
-    if (type == measureCode[index]) {
-      return index;
-    }
-  }
-}
-function getCm(value, type) {
-  measureN = getMeasure(type);
-  return value * measure2cm[measureN];
-}
+
 function annualperf() {
   //Get annual performance of any investment
   ci = document.getElementById("anperf.initialCapital").value;
@@ -99,7 +35,7 @@ function distance2points() {
     document.getElementById("d2p.result").style.color = "#C70039";
   }
 }
-function makeCmInRelations() {
+function quadrilateralRelations() {
   if (
     (document.getElementById("cmin.ratio.v").value != 0 &&
       document.getElementById("cmin.ratio.h").value != 0) +
@@ -217,7 +153,75 @@ function makeCmInRelations() {
   document.getElementById("cmin.result.diag").innerText =
     newDiag / measure2cm[measureN] + measureCode[measureN];
 }
+function setCm() {
+  measureName = [
+    "Centimeters",
+    "Astronomical units",
+    "Feet",
+    "Furlongs",
+    "Inches",
+    "League",
+    "Light years",
+    "Miles",
+    "Nautical Miles",
+    "Parsec",
+    "Rods",
+    "Yards",
+  ];
+  measureCode = [
+    "cm",
+    "AU",
+    "ft",
+    "fur",
+    "in",
+    "lea",
+    "ly",
+    "mi",
+    "nmi",
+    "pc",
+    "rd",
+    "yd",
+  ];
+  measure2cm = [
+    1, 14959787069100, 30.48, 20116.8, 2.54, 482803.2, 946073047258004200,
+    160934.4, 185200, 3085677581279958500, 502.92, 91.44,
+  ];
+  //how many centimeters fit in the other measure
+  selects = [
+    document.getElementById("cmin.width.type"),
+    document.getElementById("cmin.height.type"),
+    document.getElementById("cmin.diag.type"),
+    document.getElementById("cmin.result.type"),
+  ];
+  //Accomodate measure selects
+  for (let i = 0; i < selects.length; i++) {
+    for (let i2 = 0; i2 < measureCode.length; i2++) {
+      const ele = document.createElement("option");
+      ele.value = measureCode[i2];
+      ele.innerText = measureName[i2];
+      selects[i].appendChild(ele);
+    }
+  }
+}
+function getMaxDivinCommon(a, b) {
+  if (b === 0) {
+    return a;
+  }
+  return getMaxDivinCommon(b, a % b);
+}
+function getMeasure(type) {
+  for (let index = 0; index < measureCode.length; index++) {
+    if (type == measureCode[index]) {
+      return index;
+    }
+  }
+}
+function getCm(value, type) {
+  measureN = getMeasure(type);
+  return value * measure2cm[measureN];
+}
 distance2points();
 annualperf();
-makeCmInRelations();
+setCm();
+quadrilateralRelations();
 //initial execution
