@@ -1,15 +1,72 @@
-//initial execution
-distance2points();
-annualperf();
-makeCmInRelations();
-//Get annual performance of any investment
+measureName = [
+  "Centimeters",
+  "Inches",
+  "Feet",
+  "Light years",
+  "Yards",
+  "Furlongs",
+  "Rods",
+  "Nautical Miles",
+  "Miles",
+  "Parsec",
+  "League",
+  "Chain",
+  "Astronomical units",
+];
+measureCode = [
+  "cm",
+  "in",
+  "ft",
+  "ly",
+  "yd",
+  "fur",
+  "rd",
+  "nmi",
+  "mi",
+  "pc",
+  "lea",
+  "ch",
+  "AU",
+];
+measure2cm = [
+  1, 2.54, 30.48, 946073047258004200, 91.44, 20116.8, 502.92, 185200, 160934.4,
+  3085677581279958500, 482803.2, 2011.68, 14959787069100,
+];
+//how many centimeters fit in the other measure
+selects = [
+  document.getElementById("cmin.width.type"),
+  document.getElementById("cmin.height.type"),
+  document.getElementById("cmin.diag.type"),
+  document.getElementById("cmin.result.type"),
+];
+//Accomodate measure selects
+for (let i = 0; i < selects.length; i++) {
+  for (let i2 = 0; i2 < measureCode.length; i2++) {
+    const ele = document.createElement("option");
+    ele.value = measureCode[i2];
+    ele.innerText = measureName[i2];
+    selects[i].appendChild(ele);
+  }
+}
 function getMaxDivinCommon(a, b) {
   if (b === 0) {
     return a;
   }
   return getMaxDivinCommon(b, a % b);
 }
+function getMeasure(type) {
+  for (let index = 0; index < measureCode.length; index++) {
+    if (type == measureCode[index]) {
+      return index;
+    }
+  }
+}
+function getCm(value, type) {
+  measureN = getMeasure(type);
+  return value * measure2cm[measureN];
+}
 function annualperf() {
+  //Get annual performance of any investment
   ci = document.getElementById("anperf.initialCapital").value;
   cf = document.getElementById("anperf.finalCapital").value;
   ti = document.getElementById("anperf.daysInvested").value;
@@ -45,7 +102,6 @@ function distance2points() {
   }
 }
 function makeCmInRelations() {
-  //check it's possible
   if (
     (document.getElementById("cmin.ratio.v").value != 0 &&
       document.getElementById("cmin.ratio.h").value != 0) +
@@ -63,34 +119,28 @@ function makeCmInRelations() {
     document.getElementById("cmin.warning").style.display = "none";
     document.getElementById("cmin.results").style.display = "contents";
   }
-  //get width in cm
-  if (document.getElementById("cmin.width.type").value == "in") {
-    width = +document.getElementById("cmin.width").value * 2.54;
-  } else {
-    width = +document.getElementById("cmin.width").value;
-  }
-  //get height in cm
-  if (document.getElementById("cmin.height.type").value == "in") {
-    height = +document.getElementById("cmin.height").value * 2.54;
-  } else {
-    height = +document.getElementById("cmin.height").value;
-  }
-  //get diagonal in cm
-  if (document.getElementById("cmin.diag.type").value == "in") {
-    diag = +document.getElementById("cmin.diag").value * 2.54;
-  } else {
-    diag = +document.getElementById("cmin.diag").value;
-  }
+  //check if it's possible
+  width = getCm(
+    document.getElementById("cmin.width").value,
+    document.getElementById("cmin.width.type").value
+  );
+  height = getCm(
+    document.getElementById("cmin.height").value,
+    document.getElementById("cmin.height.type").value
+  );
+  diag = getCm(
+    document.getElementById("cmin.diag").value,
+    document.getElementById("cmin.diag.type").value
+  );
   hRatio = +document.getElementById("cmin.ratio.h").value;
   vRatio = +document.getElementById("cmin.ratio.v").value;
-
-  //a=the value that, multiplicated by the radio, gives the height and width
   newHRatio = 0;
   newVRatio = 0;
   newHeight = 0;
   newwidth = 0;
   newDiag = 0;
   a = 0;
+  //a=the value that, multiplicated by the ratio, gives the height and width
   method1 = "patata";
   method2 = "mandarina";
   if (hRatio != 0 && vRatio != 0) {
@@ -159,16 +209,17 @@ function makeCmInRelations() {
     "Using the the " + method1 + " and  " + method2 + " inputs.";
   document.getElementById("cmin.result.ratio").innerText =
     newHRatio + ":" + newVRatio;
-  if (document.getElementById("cmin.result.type").value == "in") {
-    document.getElementById("cmin.result.width").innerText =
-      newwidth / 2.54 + "in";
-    document.getElementById("cmin.result.height").innerText =
-      newHeight / 2.54 + "in";
-    document.getElementById("cmin.result.diag").innerText =
-      newDiag / 2.54 + "in";
-  } else {
-    document.getElementById("cmin.result.width").innerText = newwidth + "cm";
-    document.getElementById("cmin.result.height").innerText = newHeight + "cm";
-    document.getElementById("cmin.result.diag").innerText = newDiag + "cm";
-  }
+
+  measureN = getMeasure(document.getElementById("cmin.result.type").value);
+
+  document.getElementById("cmin.result.width").innerText =
+    newwidth / measure2cm[measureN] + measureCode[measureN];
+  document.getElementById("cmin.result.height").innerText =
+    newHeight / measure2cm[measureN] + measureCode[measureN];
+  document.getElementById("cmin.result.diag").innerText =
+    newDiag / measure2cm[measureN] + measureCode[measureN];
 }
+distance2points();
+annualperf();
+makeCmInRelations();
+//initial execution
