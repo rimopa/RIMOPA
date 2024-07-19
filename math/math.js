@@ -10,7 +10,6 @@ measureName = [
   "Miles",
   "Parsec",
   "League",
-  "Chain",
   "Astronomical units",
 ];
 measureCode = [
@@ -25,12 +24,11 @@ measureCode = [
   "mi",
   "pc",
   "lea",
-  "ch",
   "AU",
 ];
 measure2cm = [
   1, 2.54, 30.48, 946073047258004200, 91.44, 20116.8, 502.92, 185200, 160934.4,
-  3085677581279958500, 482803.2, 2011.68, 14959787069100,
+  3085677581279958500, 482803.2, 14959787069100,
 ];
 //how many centimeters fit in the other measure
 selects = [
