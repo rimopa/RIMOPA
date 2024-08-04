@@ -22,10 +22,13 @@
     <meta property="og:url" content="https://rimopa.github.io/RIMOPA/math" />
     <meta property="og:site_name" content="Rimopa" />
     <meta property="og:description" content="An math page for a math guy" />
-    <meta property="og:image" content="general/calabaza.jpg"
+    <meta
+      property="og:image"
+      content="https://rimopa.github.io/RIMOPA/general/calabaza.jpg"
+    />
   </head>
-  <body id="body" class="">
-    <bar id="header" style="top: 0">
+  <body id="body">
+    <bar id="header">
       <h-item>
         <img
           title="Guau alta eskin"
@@ -46,15 +49,40 @@
       </h-item>
       <a href="math.html" class="link" style="width: 100%">Math</a>
     </bar>
-    <div class="main-content">
+    <main>
+      <header>
+        <h1>Math</h1>
+        <p>Index:</p>
+        <nav>
+          <ul class="noticeToNormal">
+            <li>
+              <a href="#getannualperformance"
+                >Get annual rate of return on any investment</a
+              >
+            </li>
+            <li>
+              <a href="#getdistance2points"
+                >Get any kind of distance between any two points</a
+              >
+            </li>
+            <li>
+              <a href="#quadrilateralRelations"
+                >Make relations between quadrilateral sizes</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </header>
       <h3 title="aclaration">
         Remember: JavaScript isn't perfect! (It simply can't use full irrational
         numbers). The results of these tools are approximate.
       </h3>
-      <div id="getannualperformance" class="mathblock">
-        <h3 title="annualperf">
-          - Get annual rate of return on any investment
-        </h3>
+      <section id="getannualperformance" class="mathblock">
+        <header>
+          <h2 title="annualperf">
+            Get annual rate of return on any investment
+          </h2>
+        </header>
         <label for="anperf.initialCapital">Initial capital (invested):</label>
         <input
           class="math"
@@ -86,17 +114,19 @@
           onclick="annualperf()"
         />
         <br />
-        <p>Your invesment's annual performance:</p>
+        <h3>Your invesment's annual performance:</h3>
         <p id="anperf.result" style="font-size: 125%"></p>
         <p>
           The formula is: ((finalCapital - initialCapital) / initialCapital /
           daysInvested) * 365 * 100
         </p>
-      </div>
-      <div id="getdistance2points" class="mathblock">
-        <h3 title="distancebe2points">
-          - Get any kind of distance between any two points
-        </h3>
+      </section>
+      <section id="getdistance2points" class="mathblock">
+        <header>
+          <h2 title="distancebe2points">
+            Get any kind of distance between any two points
+          </h2>
+        </header>
         <label for="d2p.p">p:</label>
         <input
           class="math"
@@ -126,19 +156,20 @@
           onclick="distance2points()"
         />
         <br />
-        <p>The distance between that two points:</p>
+        <h3>The distance between that two points:</h3>
         <p id="d2p.result" style="font-size: 125%"></p>
         <p>The formula is: (|x₂ - x₁|ᵖ + |y₂ - y₁|ᵖ)¹/ᵖ</p>
-      </div>
-      <div id="getScreenSize" class="mathblock">
-        <h3 title="makeRelationscm&In">
-          - Make relations between quadrilateral sizes
-        </h3>
-        <span style="font-size: 75%"
-          >(May be useful for obtaining screen sizes)</span
-        >
-        <br />
-        <div id="cmin.inputs">
+      </section>
+      <section id="quadrilateralRelations" class="mathblock">
+        <header>
+          <h2 title="makeRelationscm&In">
+            Make relations between quadrilateral sizes
+          </h2>
+          <p style="font-size: 75%">
+            (May be useful for obtaining screen sizes)
+          </p>
+        </header>
+        <section id="cmin.inputs">
           <label for="cmin.width">Width:</label>
           <input
             style="margin-left: 17px"
@@ -181,68 +212,70 @@
             value="Get result"
             onclick="quadrilateralRelations()"
           />
-        </div>
+        </section>
 
         <div hidden style="margin: 20px" id="cmin.warning">
           <p style="font-size: 125%; color: #c70039">
             Not enough values to run
           </p>
         </div>
-        <div id="cmin.results">
+        <section id="cmin.results">
+          <h3>Results:</h3>
           <p id="cmin.result.method" style="font-size: 125%"></p>
-          <p>The aspect ratio:</p>
+          <h4>The aspect ratio:</h4>
           <p id="cmin.result.ratio" style="font-size: 125%"></p>
-          <p>The width:</p>
+          <h4>The width:</h4>
           <p id="cmin.result.width" style="font-size: 125%"></p>
-          <p>The height:</p>
+          <h4>The height:</h4>
           <p id="cmin.result.height" style="font-size: 125%"></p>
-          <p>The diagonal:</p>
+          <h4>The diagonal:</h4>
           <p id="cmin.result.diag" style="font-size: 125%"></p>
-          <p>These values are approximate, remember JavaScript isn't perfect</p>
+        </section>
+      </section>
+      <h2>Remember the results of these tools are approximate</h2>
+      <small id="lastModified"></small>
+    </main>
+    <bar id="footer"
+      ><div class="footer-content">
+        <h2 style="line-height: 10px; margin-block-start: 1em">
+          Santino Rimondotto
+        </h2>
+        <p style="margin-block: 0.5em">
+          Soy Santino Rimondotto, un estudiante al que le gustan estas cositas y
+          aprovechó una página que había hecho antes para modificarla y
+          convertirla en esta abominación.
+        </p>
+        <div id="footer-socials">
+          <a
+            title="Qué mirá vo?"
+            class="link"
+            href="https://www.instagram.com/rimoopa/"
+            >Instagram</a
+          >
+          <a title="Tuiteador" class="link" href="https://twitter.com/RIMOPA0"
+            >Twitter</a
+          >
+          <a
+            title="Empezando de cero"
+            class="link"
+            href="https://scratch.mit.edu/users/RIMOPA"
+            >Scratch</a
+          >
+          <a
+            title="Supongo que viene de «Read» con «It»"
+            class="link"
+            href="https://www.reddit.com/user/RIMOPA"
+            >Reddit</a
+          >
         </div>
       </div>
-      <bar id="footer"
-        ><div class="footer-content">
-          <h2 style="line-height: 10px; margin-block-start: 1em">
-            Santino Rimondotto
-          </h2>
-          <p style="margin-block: 0.5em">
-            Soy Santino Rimondotto, un estudiante al que le gustan estas cositas
-            y aprovechó una página que había hecho antes para modificarla y
-            convertirla en esta abominación.
-          </p>
-          <div id="footer-socials">
-            <a
-              title="Qué mirá vo?"
-              class="link"
-              href="https://www.instagram.com/rimoopa/"
-              >Instagram</a
-            >
-            <a title="Tuiteador" class="link" href="https://twitter.com/RIMOPA0"
-              >Twitter</a
-            >
-            <a
-              title="Empezando de cero"
-              class="link"
-              href="https://scratch.mit.edu/users/RIMOPA"
-              >Scratch</a
-            >
-            <a
-              title="Supongo que viene de «Read» con «It»"
-              class="link"
-              href="https://www.reddit.com/user/RIMOPA"
-              >Reddit</a
-            >
-          </div>
-        </div>
-        <div class="sub-footer">
-          <p>Nadie me pidió que haga esto.</p>
+      <div class="sub-footer">
+        <p>Nadie me pidió que haga esto.</p>
 
-          <p title="No sé qué más poner acá" style="padding: 3px">
-            Gracias por ver
-          </p>
-        </div>
-      </bar>
-    </div>
+        <p title="No sé qué más poner acá" style="padding: 3px">
+          Gracias por ver
+        </p>
+      </div>
+    </bar>
   </body>
 </html>

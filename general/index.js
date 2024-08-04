@@ -63,3 +63,10 @@ if (localStorage.getItem("mode") === "dark") {
 } else {
   lightMode();
 }
+//last modified time
+function resetLastModifiedTime() {
+  document.getElementById("lastModified").innerText =
+    "Last modification date: " + document.lastModified;
+}
+//initial execution
+resetLastModifiedTime();
