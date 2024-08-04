@@ -1,4 +1,3 @@
-
 function annualperf() {
   //Get annual performance of any investment
   ci = document.getElementById("anperf.initialCapital").value;
@@ -44,14 +43,14 @@ function quadrilateralRelations() {
       (document.getElementById("cmin.width").value != 0) <
     2
   ) {
-    document.getElementById("cmin.warning").style.display = "contents";
-    document.getElementById("cmin.results").style.display = "none";
+    document.getElementById("cmin.warning").hidden = 0;
+    document.getElementById("cmin.results").hidden = 1;
     //contents-none
     console.log("Not enough values to run");
     return;
   } else {
-    document.getElementById("cmin.warning").style.display = "none";
-    document.getElementById("cmin.results").style.display = "contents";
+    document.getElementById("cmin.warning").hidden = 1;
+    document.getElementById("cmin.results").hidden = 0;
   }
   //check if it's possible
   width = getCm(
