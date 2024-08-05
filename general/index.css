@@ -1,36 +1,88 @@
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue",
+    Helvetica, Arial, sans-serif, times;
   color: #000;
   background: #fcfcfc;
+  max-width: 100%;
 }
+main {
+  padding-top: 5rem;
+}
+header {
+  font-family: "Courier New", Courier, monospace, "Georgia", "Times New Roman",
+    Times, serif;
+  font-size: 110%;
+}
+/*dark mode*/
+body.dark {
+  background-color: #111111;
+  color: #fcfcfc;
+}
+body.dark bar {
+  background-color: #333333;
+}
+body.dark #header .h-item.button:hover {
+  background-color: #515151;
+}
+body.dark bar a.link {
+  color: #fff;
+}
+body.dark a.link {
+  color: #f6ab3c;
+}
+body.dark bar a.link:hover {
+  color: #f6ab3c;
+}
+body.dark a.link:hover {
+  color: #00dc0f;
+}
+body.dark #header h-item.button:hover {
+  background-color: #515151;
+}
+a.noticeToNormal:hover,
+ul.noticeToNormal li a:hover {
+  animation: imHere 3s linear 1 alternate-reverse;
+}
+/*bars*/
 bar {
   position: absolute;
   right: 0;
   background: #f15c2a;
-  height: auto;
-  width: 100vw;
+  width: 100%;
   color: #fff;
   line-height: 28px;
-  font-size: 14px;
   align-items: center;
 }
-bar#header {
+bar a.link {
+  color: #fff;
+}
+bar a.link:hover {
+  color: #f6ab3c;
+}
+/*  header*/
+#header {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   flex-wrap: nowrap;
   box-sizing: border-box;
-  align-items: center;
   height: 3rem;
   font-weight: bold;
   font-size: 1rem;
   top: 0;
+  width: 100%;
 }
 #header img.logo {
   height: 2.25rem;
   bottom: 0.08em;
   margin-left: 1.05em;
   position: relative;
+}
+#header h-item {
+  padding: 0 0.75rem;
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
 }
 #header h-item.button {
   cursor: pointer;
@@ -40,10 +92,66 @@ bar#header {
 #header h-item.button:hover {
   background-color: #b13e17;
 }
-main {
-  padding-top: 5rem;
-  padding-bottom: 0.2rem;
+/*  footer*/
+#footer {
+  height: auto;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  -webkit-transform: translateY(55%);
+  transform: translateY(55%);
 }
+#footer p,
+#footer h2,
+#footer a {
+  padding: 0 10px 0 10px;
+  text-align: center;
+}
+#footer * {
+  margin-block: 0.5em;
+  align-content: center;
+}
+#footer-socials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+#footer-socials a {
+  padding-right: 17px;
+  padding-bottom: 5px;
+}
+#subfooter {
+  background: #000;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 0;
+}
+a {
+  text-decoration: none;
+}
+a.link {
+  color: #ff5300;
+}
+a.link:hover {
+  color: #00dc0f;
+}
+/*links*/
+@keyframes imHere {
+  100% {
+    color: #00dc0f;
+  }
+}
+a.noticeToNormal,
+ul.noticeToNormal li a {
+  color: #ff5300;
+}
+li {
+  margin-bottom: 0.7em;
+}
+/*math*/
 .math {
   width: 90px;
   border-color: #ccc;
@@ -55,9 +163,6 @@ main {
   border-radius: 4px;
   color: #363636;
 }
-[type="submit"].math {
-  background-color: #e2e2e2;
-}
 [type="submit"].math:hover {
   cursor: pointer;
   background-color: #f15c2a;
@@ -66,43 +171,6 @@ main {
 }
 .mathblock header {
   color: #ee7248;
-}
-a {
-  text-decoration: none;
-}
-a.link {
-  color: #ff5300;
-}
-a.link:hover {
-  color: #00dc0f;
-}
-@keyframes imHere {
-  100% {
-    color: #00dc0f;
-  }
-}
-a.noticeToNormal:hover,
-ul.noticeToNormal li a:hover {
-  animation: imHere 3s linear 1 alternate-reverse;
-}
-a.noticeToNormal,
-ul.noticeToNormal li a {
-  color: #ff5300;
-}
-li {
-  margin-bottom: 0.7em;
-}
-bar a.link {
-  color: #fff;
-}
-bar a.link:hover {
-  color: #f6ab3c;
-}
-#header h-item {
-  padding: 0 0.75rem;
-  display: flex;
-  align-items: center;
-  vertical-align: middle;
 }
 /*Scratch-likely button, i is placed like this: <a data-placement="left" href="https://github.com/ScratchCE/beta"> <button class="button"><span>GitHub Repository</span></button></a>*/
 /*.button {
@@ -117,72 +185,3 @@ color: #fff;
 font-size: .8rem;
 font-weight: bold;}
         .button:hover{background-color: #00dc0f;}*/
-.footer-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  text-align: left;
-}
-.footer-content p {
-  max-width: 550px;
-  margin: 15px auto;
-  padding: 0% 5% 0% 5%;
-}
-#footer-socials {
-  float: right;
-  margin-bottom: 10px;
-}
-#footer-socials a {
-  padding-right: 17px;
-  padding-bottom: 5px;
-}
-.sub-footer {
-  background: #000;
-  width: 100vw;
-  text-align: center;
-}
-.sub-footer p {
-  margin-block: 0em;
-}
-#semicolon {
-  margin: 0;
-  line-height: 1.5385em;
-  background: #000;
-  color: #fff;
-  font: 81.25% "Lucida Grande", arial, sans-serif;
-  padding-left: 18px;
-  text-align: left;
-}
-/*dark mode*/
-body.dark {
-  background-color: #111111;
-  color: #fcfcfc;
-}
-body.dark bar {
-  background-color: #333333;
-}
-body.dark #header .h-item.button:hover {
-  background-color: #515151;
-}
-body.dark #puntos-especificos ul li a {
-  color: #f6ab3c;
-}
-body.dark bar a.link {
-  color: #fff;
-}
-body.dark a.link {
-  color: #f6ab3c;
-}
-body.dark bar a.link:hover {
-  color: #f6ab3c;
-}
-body.dark a.link:hover {
-  color: #00dc0f;
-}
-body.dark #puntos-especificos ul li a:hover {
-  color: #00dc0f;
-}
-body.dark #header h-item.button:hover {
-  background-color: #515151;
-}

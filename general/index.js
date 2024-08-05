@@ -52,10 +52,9 @@ function toggleTheme() {
     darkMode();
   }
 }
-
-// automatic light/dark mode
 if (localStorage.getItem("mode") === "dark") {
   darkMode();
+  // automatic light/dark mode
 } else if (localStorage.getItem("mode") === "light") {
   lightMode();
 } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
@@ -63,10 +62,26 @@ if (localStorage.getItem("mode") === "dark") {
 } else {
   lightMode();
 }
-//last modified time
 function resetLastModifiedTime() {
+  //last modified time
   document.getElementById("lastModified").innerText =
     "Last modification date: " + document.lastModified;
 }
+function bars() {
+  document.addEventListener("DOMContentLoaded", () => {
+    fetch("index.html")
+      .then((response) => response.text())
+      .then((data) => {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(data, "text/html");
+        const footer = doc.querySelector("#footer");
+        const header = doc.querySelector("#header");
+        document.getElementById("footer").innerHTML = footer.outerHTML;
+        document.getElementById("header").innerHTML = header.outerHTML;
+      })
+      .catch((error) => console.error("Error fetching footer/header:", error));
+  });
+}
 //initial execution
 resetLastModifiedTime();
+bars();
