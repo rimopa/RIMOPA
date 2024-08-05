@@ -24,17 +24,11 @@ body.dark bar {
 body.dark #header .h-item.button:hover {
   background-color: #515151;
 }
-body.dark bar a.link {
+body.dark bar a {
   color: #fff;
 }
-body.dark a.link {
+body.dark bar a:hover {
   color: #f6ab3c;
-}
-body.dark bar a.link:hover {
-  color: #f6ab3c;
-}
-body.dark a.link:hover {
-  color: #00dc0f;
 }
 body.dark #header h-item.button:hover {
   background-color: #515151;
@@ -53,10 +47,10 @@ bar {
   line-height: 28px;
   align-items: center;
 }
-bar a.link {
+bar a {
   color: #fff;
 }
-bar a.link:hover {
+bar a:hover {
   color: #f6ab3c;
 }
 /*  header*/
@@ -132,10 +126,10 @@ bar a.link:hover {
 a {
   text-decoration: none;
 }
-a.link {
+bar a {
   color: #ff5300;
 }
-a.link:hover {
+bar a:hover {
   color: #00dc0f;
 }
 /*links*/
