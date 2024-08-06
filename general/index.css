@@ -80,7 +80,7 @@ body.dark bar a:hover {
 #header h-item.button:hover {
   background-color: #b13e17;
 }
-body.dark #header .h-item.button:hover {
+body.dark #header h-item.button:hover {
   background-color: #515151;
 }
 /*  footer*/
