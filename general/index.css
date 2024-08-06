@@ -5,6 +5,10 @@ body {
   background: #fcfcfc;
   max-width: 100%;
 }
+body.dark {
+  background-color: #111111;
+  color: #fcfcfc;
+}
 main {
   padding-top: 5rem;
 }
@@ -12,26 +16,6 @@ header {
   font-family: "Courier New", Courier, monospace, "Georgia", "Times New Roman",
     Times, serif;
   font-size: 110%;
-}
-/*dark mode*/
-body.dark {
-  background-color: #111111;
-  color: #fcfcfc;
-}
-body.dark bar {
-  background-color: #333333;
-}
-body.dark #header .h-item.button:hover {
-  background-color: #515151;
-}
-body.dark bar a {
-  color: #fff;
-}
-body.dark bar a:hover {
-  color: #f6ab3c;
-}
-body.dark #header h-item.button:hover {
-  background-color: #515151;
 }
 a.noticeToNormal:hover,
 ul.noticeToNormal li a:hover {
@@ -47,10 +31,19 @@ bar {
   line-height: 28px;
   align-items: center;
 }
+body.dark bar {
+  background-color: #333333;
+}
 bar a {
   color: #fff;
 }
+body.dark bar a {
+  color: #fff;
+}
 bar a:hover {
+  color: #000;
+}
+body.dark bar a:hover {
   color: #f6ab3c;
 }
 /*  header*/
@@ -72,6 +65,7 @@ bar a:hover {
   margin-left: 1.05em;
   position: relative;
 }
+
 #header h-item {
   padding: 0 0.75rem;
   display: flex;
@@ -85,6 +79,9 @@ bar a:hover {
 }
 #header h-item.button:hover {
   background-color: #b13e17;
+}
+body.dark #header .h-item.button:hover {
+  background-color: #515151;
 }
 /*  footer*/
 #footer {
@@ -125,12 +122,6 @@ bar a:hover {
 }
 a {
   text-decoration: none;
-}
-bar a {
-  color: #ff5300;
-}
-bar a:hover {
-  color: #00dc0f;
 }
 /*links*/
 @keyframes imHere {

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <!--repeatitive through site-->
     <script type="text/javascript" src="general/index.js" defer></script>
@@ -48,12 +48,13 @@
           src="general/logo.png"
         />
       </h-item>
-      <h-item class="button" onclick="toggleTheme()">
+      <h-item title="dark mode" class="button" onclick="toggleTheme()">
         <img
           style="vertical-align: middle"
           src="general/dark_theme.svg"
           width="24"
           height="24"
+          alt="dark mode button"
         />
       </h-item>
       <a href="math.html" style="width: 100%">Math</a>
@@ -112,11 +113,36 @@
           href="https://www.reddit.com/user/RIMOPA"
           >Reddit</a
         >
-        <a
-          title="primer uso real de este correo"
-          href="mailto:rimopapomir@gmail.com"
-          >Mail me</a
+        <!-- <form
+          action="mailto:rimopapomir@gmail.com"
+          method="get"
+          enctype="text/plain"
         >
+          Subject:<br />
+          <input
+            type="text"
+            name="subject"
+            placeholder="Your Name"
+            autocomplete="name"
+          />
+          Email:
+          <br />
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            autocomplete="email"
+          /><br />
+          Message:<br />
+          <textarea
+            name="body"
+            rows="5"
+            cols="30"
+            placeholder="Your Message"
+          ></textarea
+          ><br />
+          <input type="submit" value="Send" />
+        </form>-->
       </div>
       <div id="subfooter">
         <p>Nadie me pidió que haga esto.</p>
