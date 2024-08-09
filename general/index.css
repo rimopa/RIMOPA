@@ -13,13 +13,12 @@ main {
   padding-top: 5rem;
 }
 header {
-  font-family: "Courier New", Courier, monospace, "Georgia", "Times New Roman",
-    Times, serif;
   font-size: 110%;
 }
-a.noticeToNormal:hover,
-ul.noticeToNormal li a:hover {
-  animation: imHere 3s linear 1 alternate-reverse;
+header,
+.index {
+  font-family: "Courier New", Courier, monospace, "Georgia", "Times New Roman",
+    Times, serif;
 }
 /*bars*/
 bar {
@@ -36,6 +35,7 @@ body.dark bar {
 }
 bar a {
   color: #fff;
+  text-decoration: none;
 }
 body.dark bar a {
   color: #fff;
@@ -120,9 +120,6 @@ body.dark #header h-item.button:hover {
   text-align: center;
   margin-bottom: 0;
 }
-a {
-  text-decoration: none;
-}
 /*links*/
 @keyframes imHere {
   100% {
@@ -130,8 +127,12 @@ a {
   }
 }
 a.noticeToNormal,
-ul.noticeToNormal li a {
+ul.index li a {
   color: #ff5300;
+}
+a.noticeToNormal:hover,
+ul.index li a:hover {
+  animation: imHere 3s linear 1 alternate-reverse;
 }
 li {
   margin-bottom: 0.7em;
