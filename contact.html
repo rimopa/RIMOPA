@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--repeatitive through site-->
+    <script type="text/javascript" src="general/index.js" defer></script>
+    <link rel="stylesheet" href="general/index.css" />
+    <link rel="icon" href="general/favicon.ico" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#ee7248" />
+    <!--refs-->
+    <meta name="canonical" content="https://rimopa.github.io/RIMOPA/math" />
+    <script type="text/javascript" src="contact/contact.js" defer></script>
+    <!--general-->
+    <title>Math - Rimopa</title>
+    <meta name="description" content="A math page for a math guy" />
+    <!--Open Graph Protocol-->
+    <meta property="og:url" content="https://rimopa.github.io/RIMOPA/math" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Math - Rimopa" />
+    <meta property="og:description" content="A math page for a math guy" />
+    <meta
+      property="og:image"
+      content="https://rimopa.github.io/RIMOPA/general/calabaza.jpg"
+    />
+    <meta property="og:image:type" content="image/jpg" />
+    <meta property="og:image:width" content="1500" />
+    <meta property="og:image:height" content="500" />
+
+    <!--Twitter-->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="rimopa.github.io" />
+    <meta
+      property="twitter:url"
+      content="https://rimopa.github.io/RIMOPA/math"
+    />
+    <meta name="twitter:title" content="Math - Rimopa" />
+    <meta name="twitter:description" content="An math page for a math guy" />
+    <meta
+      name="twitter:image"
+      content="https://rimopa.github.io/RIMOPA/general/calabaza.jpg"
+    />
+  </head>
+  <body id="body">
+    <bar id="header"></bar>
+    <main>
+      <header>
+        <h1>Contact form</h1>
+      </header>
+      <form
+        id="contactForm"
+        action="mailto:rimopapomir@gmail.com"
+        method="get"
+        eenctype="multipart/form-data"
+      >
+        <label
+          >Name:
+          <input
+            type="text"
+            id="fullName"
+            placeholder="Your Name"
+            autocomplete="name"
+        /></label>
+        <label>
+          Email:
+          <input
+            type="email"
+            id="email"
+            placeholder="Your Email"
+            autocomplete="email"
+        /></label>
+        <label>
+          Subject:
+          <input id="subject" placeholder="subject"
+        /></label>
+        <label>
+          Message:
+          <textarea
+            id="message"
+            rows="5"
+            cols="30"
+            placeholder="Your Message"
+          ></textarea>
+        </label>
+        <button type="submit" id="sendButton">Submit</button>
+      </form>
+      <form
+        action="mailto:someone@example.com"
+        method="post"
+        enctype="text/plain"
+      >
+        Name:
+        <br />
+        <input type="text" name="name" />
+        <br />
+        E-mail:
+        <br />
+        <input type="text" name="mail" />
+        <br />
+        Comment:
+        <br />
+        <input type="text" name="comment" size="50" />
+        <br />
+        <br />
+        <input type="submit" value="Send" />
+        <input type="reset" value="Reset" />
+      </form>
+      <small id="lastModified"></small>
+    </main>
+    <bar id="footer"> </bar>
+  </body>
+</html>
