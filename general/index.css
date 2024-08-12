@@ -15,8 +15,9 @@ main {
 header {
   font-size: 110%;
 }
-header,
-.index {
+.index,
+.section-title,
+#pageTitle {
   font-family: "Courier New", Courier, monospace, "Georgia", "Times New Roman",
     Times, serif;
 }
@@ -39,12 +40,6 @@ bar a {
 }
 body.dark bar a {
   color: #fff;
-}
-bar a:hover {
-  color: #000;
-}
-body.dark bar a:hover {
-  color: #f6ab3c;
 }
 /*  header*/
 #header {
@@ -126,12 +121,10 @@ body.dark #header h-item.button:hover {
     color: #00dc0f;
   }
 }
-a.noticeToNormal,
-ul.index li a {
+a {
   color: #ff5300;
 }
-a.noticeToNormal:hover,
-ul.index li a:hover {
+a:hover {
   animation: imHere 3s linear 1 alternate-reverse;
 }
 li {
