@@ -15,6 +15,6 @@ function capitalizationTitle() {
     }
     document.getElementById("pageTitle").innerText = title;
     capitalizationTitle();
-  }, "100");
+  }, "200");
 }
 capitalizationTitle();
