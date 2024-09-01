@@ -4,14 +4,13 @@ function annualperf() {
   cf = document.getElementById("anperf.finalCapital").value;
   ti = document.getElementById("anperf.daysInvested").value;
   if ((ci && cf && ti) != "") {
+    document.getElementById("anperf.warning").hidden = 1;
+    document.getElementById("anperf.result").hidden = 0;
     document.getElementById("anperf.result").innerText =
       ((cf - ci) / ci / ti) * 365 * 100 + "%";
-    document.getElementById("anperf.result").style.color =
-      document.getElementById("body").style.color;
   } else {
-    document.getElementById("anperf.result").innerText =
-      "Some arguments are missing";
-    document.getElementById("anperf.result").style.color = "#C70039";
+    document.getElementById("anperf.warning").hidden = 0;
+    document.getElementById("anperf.result").hidden = 1;
   }
 }
 function distance2points() {
@@ -22,16 +21,15 @@ function distance2points() {
   x2 = document.getElementById("d2p.x2").value;
   y2 = document.getElementById("d2p.y2").value;
   if ((p && x1 && y1 && x2 && y2) != "") {
+    document.getElementById("d2p.warning").hidden = 1;
+    document.getElementById("d2p.result").hidden = 0;
     document.getElementById("d2p.result").innerText =
       (Math.abs(x2 - x1) ** p + Math.abs(y2 - y1) ** p) ** (1 / p);
-    document.getElementById("d2p.result").style.color =
-      document.getElementById("body").style.color;
     document.getElementById("d2p.result").title =
       document.getElementById("d2p.result").innerText + " mandarinas";
   } else {
-    document.getElementById("d2p.result").innerText =
-      "Some arguments are missing";
-    document.getElementById("d2p.result").style.color = "#C70039";
+    document.getElementById("d2p.warning").hidden = 0;
+    document.getElementById("d2p.result").hidden = 1;
   }
 }
 function quadrilateralRelations() {
@@ -45,7 +43,6 @@ function quadrilateralRelations() {
   ) {
     document.getElementById("cmin.warning").hidden = 0;
     document.getElementById("cmin.results").hidden = 1;
-    //contents-none
     console.log("Not enough values to run");
     return;
   } else {

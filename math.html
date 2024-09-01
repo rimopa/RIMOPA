@@ -77,6 +77,10 @@
             Get annual rate of return on any investment
           </h2>
         </header>
+        <p>
+          The formula is: ((finalCapital - initialCapital) / initialCapital /
+          daysInvested) * 365 * 100
+        </p>
         <label
           >Initial capital (invested):
           <input
@@ -112,11 +116,10 @@
         />
         <br />
         <h3>Your invesment's annual performance:</h3>
-        <p id="anperf.result" style="font-size: 125%"></p>
-        <p>
-          The formula is: ((finalCapital - initialCapital) / initialCapital /
-          daysInvested) * 365 * 100
-        </p>
+        <p id="anperf.result" class="math-result"></p>
+        <div hidden id="anperf.warning">
+          <p class="math-warning">Not enough values to run</p>
+        </div>
       </section>
       <section id="getdistance2points" class="mathblock">
         <header>
@@ -124,16 +127,11 @@
             Get any kind of distance between any two points
           </h2>
         </header>
+        <p>The formula is: (|x₂ - x₁|ᵖ + |y₂ - y₁|ᵖ)¹/ᵖ</p>
         <label
-          >p:
-          <input
-            class="math"
-            type="number"
-            id="d2p.p"
-            value="2"
-            style="margin-left: 5px"
+          >p: <input class="math" type="number" id="d2p.p" value="2"
         /></label>
-        <span style="font-size: 75%">(2 is euclidian/straight distance)</span>
+        <span>(2 is euclidian/straight distance)</span>
         <br />
         <br />
         <label
@@ -159,27 +157,21 @@
         />
         <br />
         <h3>The distance between that two points:</h3>
-        <p id="d2p.result" style="font-size: 125%"></p>
-        <p>The formula is: (|x₂ - x₁|ᵖ + |y₂ - y₁|ᵖ)¹/ᵖ</p>
+        <p id="d2p.result" class="math-result"></p>
+        <div hidden id="d2p.warning">
+          <p class="math-warning">Not enough values to run</p>
+        </div>
       </section>
       <section id="quadrilateralRelations" class="mathblock">
         <header>
           <h2 title="makeRelationscm&In" class="section-title">
             Make relations between quadrilateral sizes
           </h2>
-          <p style="font-size: 75%">
-            (May be useful for obtaining screen sizes)
-          </p>
+          <p class="small">(May be useful for obtaining screen sizes)</p>
         </header>
         <section id="cmin.inputs">
           <label
-            >Width:
-            <input
-              style="margin-left: 17px"
-              class="math"
-              type="number"
-              id="cmin.width"
-              value="0"
+            >Width: <input class="math" type="number" id="cmin.width" value="0"
           /></label>
           <label
             >Measure:
@@ -188,12 +180,7 @@
           <br /><br />
           <label
             >Height:
-            <input
-              style="margin-left: 14px"
-              class="math"
-              type="number"
-              id="cmin.height"
-              value="0"
+            <input class="math" type="number" id="cmin.height" value="0"
           /></label>
           <label
             >Measure:
@@ -226,23 +213,20 @@
             onclick="quadrilateralRelations()"
           />
         </section>
-
-        <div hidden style="margin: 20px" id="cmin.warning">
-          <p style="font-size: 125%; color: #c70039">
-            Not enough values to run
-          </p>
+        <div hidden id="cmin.warning">
+          <p class="math-warning">Not enough values to run</p>
         </div>
         <section id="cmin.results">
           <h3>Results:</h3>
-          <p id="cmin.result.method" style="font-size: 125%"></p>
+          <p id="cmin.result.method" class="math-result"></p>
           <h4>The aspect ratio:</h4>
-          <p id="cmin.result.ratio" style="font-size: 125%"></p>
+          <p id="cmin.result.ratio" class="math-result"></p>
           <h4>The width:</h4>
-          <p id="cmin.result.width" style="font-size: 125%"></p>
+          <p id="cmin.result.width" class="math-result"></p>
           <h4>The height:</h4>
-          <p id="cmin.result.height" style="font-size: 125%"></p>
+          <p id="cmin.result.height" class="math-result"></p>
           <h4>The diagonal:</h4>
-          <p id="cmin.result.diag" style="font-size: 125%"></p>
+          <p id="cmin.result.diag" class="math-result"></p>
         </section>
       </section>
       <h2>Remember the results of these tools are approximate</h2>

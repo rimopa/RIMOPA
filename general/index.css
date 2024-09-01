@@ -84,27 +84,28 @@ body.dark #header .button:hover {
 #footer p,
 #footer h2,
 #footer a {
-  padding: 0 10px 0 10px;
+  padding: 0 10px;
   text-align: center;
 }
-#footer * {
-  margin-block: 0.5em;
-  align-content: center;
+#footer p {
+  max-width: 550px;
+  text-align: left;
 }
 #footer-socials {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-}
-#footer-socials a {
-  padding-right: 17px;
-  padding-bottom: 5px;
+  align-content: center;
+  flex-direction: row;
+  margin-block-end: 1em;
 }
 #subfooter {
   background: #000;
   width: 100%;
   text-align: center;
+  padding: 5px 0;
   margin-bottom: 0;
 }
 /*links*/
@@ -121,6 +122,10 @@ a:hover {
 }
 li {
   margin-bottom: 0.7em;
+}
+/*other*/
+.small {
+  font-size: 75%;
 }
 /*math*/
 .math {
@@ -142,6 +147,14 @@ li {
 }
 .mathblock header {
   color: #ee7248;
+}
+.math-warning {
+  font-size: 125%;
+  margin-left: 20px;
+  color: #c70039;
+}
+.math-result {
+  font-size: 125%;
 }
 /*Scratch-likely button, i is placed like this: <a data-placement="left" href="https://github.com/ScratchCE/beta"> <button class="button"><span>GitHub Repository</span></button></a>*/
 /*.button {
