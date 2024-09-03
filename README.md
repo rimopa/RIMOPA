@@ -1,4 +1,4 @@
-<script type="text/javascript" src="hellp.js" defer></script>
+<script type="text/javascript" src="hello.js" defer></script>
 
 <text id="hellos"></text>
 

@@ -6,4 +6,4 @@ let hellos = [
   '  printf("")',
   '  std::cout << ""',
 ];
-document.getElementById("hellos").innerHTML = shuffle(hellos);
+document.getElementById("hellos").innerText = shuffle(hellos);
