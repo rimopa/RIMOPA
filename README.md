@@ -1,4 +1,4 @@
-<script type="text/javascript" src="/hellos.js" defer></script>
+<script type="text/javascript" src="hellos.js" defer></script>
 
 ```js
 let hellos = [
