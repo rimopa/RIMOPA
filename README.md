@@ -1,10 +1,6 @@
 <script type="text/javascript" src="hellos.js" defer></script>
 
-```js
-js?
-```
-
-<text id="hellos"></text>
+<h1 id="hellos"></h1>
 
 # Hello, World
 
