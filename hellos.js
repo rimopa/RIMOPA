@@ -6,4 +6,5 @@ let hellos = [
   '  printf("")',
   '  std::cout << ""',
 ];
-document.getElementById("hellos").innerText = shuffle(hellos);
+document.getElementById("hellos").innerText =
+  hellos[Math.floor(Math.random() * hellos.length)];
