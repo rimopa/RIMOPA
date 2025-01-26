@@ -4,11 +4,9 @@
 
 <h3>
 
-console.log(a)
+console.log(a);
 
 print(a)
 
-print#n(a)
-
-Console.WriteLine(a)
+Console.WriteLine(a);
 </h3>
