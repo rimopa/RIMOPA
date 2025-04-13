@@ -4,9 +4,9 @@
 
 <h3>
 
-console.log(a);
+console.log("Hello World");
 
-print(a)
+print("Holoa Munfo")
 
-Console.WriteLine(a);
+Console.WriteLine(こんにちは世界);
 </h3>
