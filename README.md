@@ -6,7 +6,7 @@
 
 console.log("Hello World");
 
-print("Holoa Munfo")
+print("Holoa Mundo")
 
 Console.WriteLine(こんにちは世界);
 </h3>
