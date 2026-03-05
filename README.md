@@ -2,11 +2,15 @@
 
 <span style="font-size: 500%">
   
+  ```c
+  fprintf(stdout, "こんにちは世界\n");
+```
+  ```js
   console.log("Hello World");
-  
+```
+  ```python
   print("Hola Mundo")
-  
-  Console.WriteLine(こんにちは世界);
+  ```
 </span>
 
 <div align="center">
